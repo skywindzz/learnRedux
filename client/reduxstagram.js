@@ -20,3 +20,5 @@ const router = (
 )
 
 render(router, document.getElementById('root'));
+
+/* why use cloneElement on this.props.children */
