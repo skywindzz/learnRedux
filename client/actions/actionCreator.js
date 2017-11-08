@@ -32,3 +32,4 @@ export const removeComment => (postId, indexToRemove) {
 
 //change of route will be handle by react-router-redux not in actionCreators
 
+ 
