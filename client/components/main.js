@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router';
 import PhotoGrid from './photoGrid';
 import Single from './single';
 
-const Main = React.createClass({
+class Main extends Component {
     render() {
         return (
             <div>
@@ -14,6 +14,6 @@ const Main = React.createClass({
             </div>
         )
     }
-})
+}
 
 export default Main;
