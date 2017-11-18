@@ -12,7 +12,6 @@ class Single extends Component {
         //the || [] is for when a single photo page has no comments this way if you add one 
         //you can add into that empty array also when need to map over it it won't show error if there is no comment
         const postComments = this.props.comments[postId] || [];
-        console.log(postComments, "this is from single.js");
         //get the post  
         return (
             <div className="single-photo">
