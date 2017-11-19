@@ -17,6 +17,12 @@ import { Provider } from 'react-redux';
 //import data
 import store, { history } from './store';
 
+//using sentry tests
+import Raven from 'raven-js';
+import { sentry_url } from './data/config';
+
+Raven.config('https://8bd6a53debfd41d88aebb338b4e3d099@sentry.io/247374').install()
+
 const router = (
     <Provider store={ store }r>
         <Router history={history}>
