@@ -23,6 +23,8 @@ import { sentry_url } from './data/config';
 
 Raven.config('https://8bd6a53debfd41d88aebb338b4e3d099@sentry.io/247374').install()
 
+//don't forget to use redux too.  commit will let you keep the changes you made to the initial state
+//reset will reset all the commit and get get your data back to initial state
 const router = (
     <Provider store={ store }r>
         <Router history={history}>

@@ -14,11 +14,17 @@ const defaultState = {
     comments
 }
 
-const store = createStore(rootReducer, defaultState);
+const enchancers = compose(
+    window.devToolsExtension ? window.devToolsExtension():f => f
+);
+
+const store = createStore(rootReducer, defaultState, enchancers);
 
 export const history = syncHistoryWithStore(browserHistory, store);
 
 //reducer hot reload (means that when you update your reducer functions you don't have to refresh to make it work it will just work!)
+//first you accept hot reload, then you re aquire the root reducer
+//you can't use import inside a function so you need to do require
 if(module.hot) {
     module.hot.accept('./reducers/', ()=> {
         const nextRootReducer = require('./reducers').default;
