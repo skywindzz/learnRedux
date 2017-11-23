@@ -32,13 +32,3 @@ export const removeComment = (postId, i) => {
 }
 
 //change of route will be handle by react-router-redux not in actionCreators
-
- function printNumbers() {
-     for (let i = 0; i < 10; i++) {
-         setTimeout(function() {
-             console.log(i)
-         }, i * 100)
-     }
- }
-
- printNumbers();
